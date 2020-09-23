@@ -7,15 +7,19 @@ public class Word {
     private int mImageResourceID = NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Word(String defaultTranslation, String miwokTranslation) {
+    private int mAudioResourceID;
+
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceID) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioResourceID = audioResourceID;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceID) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceID , int imageResourceID) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceID = imageResourceID;
+        mAudioResourceID = audioResourceID;
     }
 
     // getter and setter
@@ -33,5 +37,9 @@ public class Word {
 
     public boolean hasImage(){
         return mImageResourceID != NO_IMAGE_PROVIDED;
+    }
+
+    public int getAudioResourceID() {
+        return mAudioResourceID;
     }
 }
