@@ -42,4 +42,14 @@ public class Word {
     public int getAudioResourceID() {
         return mAudioResourceID;
     }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mImageResourceID=" + mImageResourceID +
+                ", mAudioResourceID=" + mAudioResourceID +
+                '}';
+    }
 }
