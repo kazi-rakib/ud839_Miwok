@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:minHeight="@dimen/list_item_height"
-    android:background="@color/tan_background" >
+    android:background="@color/tan_background">
 
     <ImageView
         android:id="@+id/image"
+        tools:src="@drawable/number_one"
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height" />
 
     <LinearLayout
         android:id="@+id/text_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="false"
+        android:layout_toRightOf="@+id/image"
         android:orientation="vertical"
         tools:background="@color/category_numbers"
         android:paddingLeft="@dimen/activity_horizontal_margin">
@@ -44,4 +49,13 @@
 
     </LinearLayout>
 
-</LinearLayout>
+    <ImageView
+        android:src="@drawable/baseline_play_arrow_24"
+        tools:src="@drawable/baseline_play_arrow_24"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp" />
+
+</RelativeLayout>
