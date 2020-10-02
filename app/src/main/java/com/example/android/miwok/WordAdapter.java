@@ -44,13 +44,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView miwokTranslation = (TextView) listItemView.findViewById(R.id.miwok_text_view);
         // Get the version name from the current AndroidFlavor object and
         // set this text on the name TextView
-        miwokTranslation.setText(currentWord.getMiwokTranslation());
+        miwokTranslation.setText(currentWord.getMiwokTranslationId());
 
         // Find the TextView in the list_item.xml layout with the ID version_number
         TextView defaultTranslation = (TextView) listItemView.findViewById(R.id.default_text_view);
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
-        defaultTranslation.setText(currentWord.getDefaultTranslation());
+        defaultTranslation.setText(currentWord.getDefaultTranslationId());
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.image);
@@ -59,7 +59,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         // check whether image is associated or not
         if(currentWord.hasImage()) {
-            iconView.setImageResource(currentWord.getImageResourceID());
+            iconView.setImageResource(currentWord.getImageResourceId());
             // make sure image is visible
             iconView.setVisibility(View.VISIBLE);
         }
